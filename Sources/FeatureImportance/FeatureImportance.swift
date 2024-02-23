@@ -10,10 +10,10 @@ import CoreML
 import CreateML
 import OSLog
 
-public struct Predictor {
+public struct FeatureImportance {
     private static let logger = Logger(subsystem: "FeatureExtractor", category: "Predictor")
         
-    public static func getFeatureImportance(dataFrame: DataFrame,
+    public static func evaluate(on dataFrame: DataFrame,
                                             featureName: String,
                                             regressor: Regressabe,
                                             parameters: EvaluationParameters) throws -> Mse
